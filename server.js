@@ -13,10 +13,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/static/index.js");
+    res.sendFile(__dirname + "/static/_SCRIPTS/index.js");
 });
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/static/index.css");
+    res.sendFile(__dirname + "/static/_CSS/index.css");
 });
-
-
