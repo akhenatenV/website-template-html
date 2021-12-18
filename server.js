@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-app.use("/static", express.static('./static/'));
+app.use(express.static("static"));
 const port = 3000;
 
 app.listen(port, function(){
@@ -13,8 +13,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/static/_SCRIPTS/index.js");
+    res.sendFile(__dirname + "/_SCRIPTS/index.js");
 });
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/static/_CSS/index.css");
+    res.sendFile(__dirname + "/_CSS/index.css");
 });
